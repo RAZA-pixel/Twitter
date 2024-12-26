@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Twitter Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="messages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar-left">
+            <div class="logo">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <nav>
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="explore.html"><i class="fas fa-hashtag"></i> Explore</a>
+                <a href="notifications.html"><i class="far fa-bell"></i> Notifications</a>
+                <a href="messages.html" class="active"><i class="far fa-envelope"></i> Messages</a>
+                <a href="bookmarks.html"><i class="far fa-bookmark"></i> Bookmarks</a>
+                <a href="profile.html"><i class="far fa-user"></i> Profile</a>
+            </nav>
+            <button class="tweet-btn">Tweet</button>
+            
+            <!-- User Profile Section -->
+            <div class="user-profile">
+                <img src="./assets/default-avatar.svg" alt="Profile" class="profile-pic">
+                <div class="profile-info">
+                    <span class="name">Loading...</span>
+                    <span class="username">@loading</span>
+                </div>
+                <button onclick="logout()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content messages-container">
+            <!-- Messages List -->
+            <div class="messages-list">
+                <div class="messages-header">
+                    <h2>Messages</h2>
+                    <div class="message-actions">
+                        <button class="settings-btn">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <button class="new-message-btn">
+                            <i class="fas fa-envelope"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="messages-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search Direct Messages">
+                </div>
+                <div class="conversations-list">
+                    <!-- Conversations will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-area">
+                <!-- Initial state -->
+                <div class="no-chat-selected">
+                    <h3>Select a message</h3>
+                    <p>Choose from your existing conversations or start a new one</p>
+                    <button class="new-message-btn">New Message</button>
+                </div>
+
+                <!-- Chat state (hidden initially) -->
+                <div class="chat-container" style="display: none;">
+                    <div class="chat-header">
+                        <div class="chat-user-info">
+                            <img src="./assets/default-avatar.svg" alt="Profile" class="profile-pic">
+                            <div class="user-details">
+                                <span class="name">User Name</span>
+                                <span class="username">@username</span>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button><i class="fas fa-info-circle"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages">
+                        <!-- Messages will be loaded dynamically -->
+                    </div>
+                    
+                    <div class="chat-input">
+                        <div class="input-container">
+                            <input type="text" placeholder="Start a new message">
+                            <div class="input-actions">
+                                <button><i class="far fa-image"></i></button>
+                                <button><i class="far fa-smile"></i></button>
+                            </div>
+                        </div>
+                        <button class="send-btn">
+                            <i class="far fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- New Message Modal -->
+    <div class="modal new-message-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>New Message</h3>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="search-users">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search people">
+                </div>
+                <div class="suggested-users">
+                    <!-- Suggested users will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="messages.js"></script>
+</body>
+</html> 

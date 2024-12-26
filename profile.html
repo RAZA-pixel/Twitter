@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Twitter Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar-left">
+            <div class="logo">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <nav>
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="explore.html"><i class="fas fa-hashtag"></i> Explore</a>
+                <a href="notifications.html"><i class="far fa-bell"></i> Notifications</a>
+                <a href="messages.html"><i class="far fa-envelope"></i> Messages</a>
+                <a href="bookmarks.html"><i class="far fa-bookmark"></i> Bookmarks</a>
+                <a href="profile.html" class="active"><i class="far fa-user"></i> Profile</a>
+            </nav>
+            <button class="tweet-btn">Tweet</button>
+            
+            <!-- User Profile Section -->
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic">
+                <div class="profile-info">
+                    <span class="name">Loading...</span>
+                    <span class="username">@loading</span>
+                </div>
+                <button onclick="logout()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-cover">
+                    <img src="https://via.placeholder.com/1500x500" alt="Cover Photo">
+                    <button class="edit-cover-btn"><i class="fas fa-camera"></i> Edit cover photo</button>
+                </div>
+                <div class="profile-info-section">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                        <button class="edit-avatar-btn"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <div class="profile-details">
+                        <div class="profile-name-section">
+                            <h2 class="profile-name">Loading...</h2>
+                            <span class="profile-username">@loading</span>
+                        </div>
+                        <div class="profile-bio">
+                            <p>Edit profile to add your bio</p>
+                            <div class="profile-metadata">
+                                <span><i class="fas fa-map-marker-alt"></i> Location</span>
+                                <span><i class="fas fa-calendar-alt"></i> Joined <span class="join-date">Loading...</span></span>
+                            </div>
+                        </div>
+                        <div class="profile-stats">
+                            <a href="#" class="stat"><span class="stat-value">0</span> Following</a>
+                            <a href="#" class="stat"><span class="stat-value">0</span> Followers</a>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="edit-profile-btn">Edit profile</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Navigation -->
+                <nav class="profile-nav">
+                    <a href="#" class="active">Tweets</a>
+                    <a href="#">Tweets & replies</a>
+                    <a href="#">Media</a>
+                    <a href="#">Likes</a>
+                </nav>
+            </div>
+
+            <!-- Tweet Feed -->
+            <div class="tweet-feed">
+                <!-- User's tweets will be loaded here -->
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar-right">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search Twitter">
+            </div>
+            
+            <div class="similar-accounts">
+                <h3>Similar accounts</h3>
+                <div class="account-suggestions">
+                    <!-- Similar accounts will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="edit-profile-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit profile</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="edit-name" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label>Bio</label>
+                    <textarea id="edit-bio" maxlength="160"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="edit-location" maxlength="30">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html> 

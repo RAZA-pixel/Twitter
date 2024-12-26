@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar-left">
+            <div class="logo">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <nav>
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="explore.html"><i class="fas fa-hashtag"></i> Explore</a>
+                <a href="notifications.html"><i class="far fa-bell"></i> Notifications</a>
+                <a href="messages.html"><i class="far fa-envelope"></i> Messages</a>
+                <a href="bookmarks.html"><i class="far fa-bookmark"></i> Bookmarks</a>
+                <a href="profile.html"><i class="far fa-user"></i> Profile</a>
+            </nav>
+            <button class="tweet-btn">Tweet</button>
+            
+            <!-- User Profile Section -->
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic">
+                <div class="profile-info">
+                    <span class="name">Loading...</span>
+                    <span class="username">@loading</span>
+                </div>
+                <button onclick="logout()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="home-header">
+                <h2>Home</h2>
+            </div>
+            
+            <!-- Tweet Composer -->
+            <div class="tweet-composer">
+                <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic">
+                <div class="tweet-input-area">
+                    <textarea placeholder="What's happening?"></textarea>
+                    <div class="tweet-actions">
+                        <div class="tweet-attachments">
+                            <i class="far fa-image"></i>
+                            <i class="fas fa-poll"></i>
+                            <i class="far fa-smile"></i>
+                            <i class="far fa-calendar"></i>
+                        </div>
+                        <button class="tweet-btn-small">Tweet</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tweet Feed -->
+            <div class="tweet-feed">
+                <!-- Tweets will be added here dynamically -->
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar-right">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search Twitter">
+            </div>
+            
+            <div class="trending-section">
+                <h3>What's happening</h3>
+                <div class="trending-item">
+                    <span class="trend-category">Trending in Technology</span>
+                    <span class="trend-name">#WebDevelopment</span>
+                    <span class="trend-tweets">10.5K Tweets</span>
+                </div>
+            </div>
+
+            <div class="who-to-follow">
+                <h3>Who to follow</h3>
+                <div class="follow-suggestion">
+                    <img src="https://via.placeholder.com/40" alt="Profile">
+                    <div class="user-info">
+                        <span class="name">Jane Smith</span>
+                        <span class="username">@janesmith</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
